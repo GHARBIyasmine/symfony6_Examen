@@ -18,7 +18,7 @@
         </tr>
       {% for e in etds %}
 
-          <tr>
+          <tr class="table-{% if loop.index is even %}warning{% else %}danger{% endif %}">
               <td onclick="changeColor(this)" > {{ e.nom }}</td>
               <td onclick="changeColor(this)" >{{ e.prenom }}</td>
               <td onclick="changeColor(this)" >{% if e.section is null %} Etudiant non encore affecte a une section
